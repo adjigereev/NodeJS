@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.15/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.15/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.15/dist/js/uikit-icons.min.js"></script>
+    <title>{{title}}</title>
+</head>
+<body>
+<div>
+    {{> menu}}
+</div>
+<h4>Добро пожаловать</h4>
+<div>
+    {{description}}
+</div>
+<div class="uk-grid ">
+    <div class="uk-card uk-card-defult uk-card-body">
+        <!--    <ul>-->
+        {{#each links}}
+            <!--        <li>-->
+            <a  uk-icon="icon: github" href="/files/{{this}}" title="{{this}}"></a>
+            {{this}}
+            <!--        </li>-->
+        {{/each}}
+        <!--    </ul>-->
+    </div>
+</div>
+</body>
+</html>
